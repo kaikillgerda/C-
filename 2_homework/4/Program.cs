@@ -1,4 +1,4 @@
-﻿// Напишите программу, которая принимает на вход цифру, обозначающую день недели, 
+﻿// Напишите программу, которая ПРИНИМАЕТ на вход цифру, обозначающую день недели, 
 // и проверяет, является ли этот день выходным.
 int Prompt(string message)
 {
@@ -6,21 +6,26 @@ int Prompt(string message)
     int number = Convert.ToInt32(Console.ReadLine());
     return number;
 }
+
 bool ValidateNumber(int number)
 {
-    if (number > 0 || number < 8)
+    if (number < 1 || number > 7)
     {
-        Console.WriteLine("В неделе 7 (семь) дней: от 1 (понедельник) до 7 (воскресенье)");
+        Console.WriteLine("В неделе 7 (семь) дней: от 1 (понедельник) до 7 (воскресенье). Пожалуйста, попробуйте еще раз.");
         return false;
     }
     return true;
 }
-int number = Prompt("Введите цифру от 1 (понедельник) до 7 (воскресенье): ");
+
+int number = Prompt("Пожалуйста, введите цифру, обозначающую день недели: ");
 if (ValidateNumber(number))
 {
-    if (number == 6 || number == 7) 
+    if (number == 6 || number == 7)
     {
-    Console.WriteLine("");
+        Console.WriteLine("да");
     }
-    
+    else
+    {
+        Console.WriteLine("нет");
+    }
 }

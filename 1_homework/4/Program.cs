@@ -8,6 +8,5 @@ while (num < n-1)
 {
     if (num % 2 == 0) Console.Write($"{num}, ");
     num = num + 2;
-}
-if 
+} 
 Console.Write(num);

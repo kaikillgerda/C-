@@ -12,6 +12,7 @@ int num = Prompt("Введите число: ");
 int count = 1;
 while (count <= num)
 {
-    Console.WriteLine(count * count * count);
+    string s = ($"{count * count * count}, ");
     count++;
+    Console.Write(s.Trim(','));
 }

@@ -1,6 +1,14 @@
-﻿int Method()
+﻿// int Method()
+// {
+//     return DateTime.Now.DayOfYear;
+// }
+// int time = Method();
+// Console.WriteLine(time);
+
+for (int i = 2; i < 10; i++)
 {
-    return DateTime.Now.DayOfYear;
+    for (int j = 2; j <= 10; j++)
+    {
+        Console.WriteLine($"{i} * {j} = {i * j}");
+    }
 }
-int time = Method();
-Console.WriteLine(time);

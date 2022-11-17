@@ -61,7 +61,7 @@ int LineMax(int[,] matr)
 
 int ColumnMin(int[,] matr)
 {
-    Console.Write("Минимальное значение элемента в каждом стролбце: ");
+    Console.Write("Минимальные значения элементов в каждом стролбце: ");
 
     int sumColumnMin = 0;
     for (int j = 0; j < matr.GetLength(1); j++)

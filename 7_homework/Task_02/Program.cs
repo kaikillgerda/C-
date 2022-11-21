@@ -64,6 +64,17 @@ void FindElement(int[,] array, int iNum, int jNum)
     Console.WriteLine($"Такого элемента не существует ");
 }
 
+bool ValidateNumber(int[,] array, int i, int j)
+{
+    if (i > array.GetLength(0)-1 || j > array.GetLength(1)-1)
+    {
+        Console.WriteLine("Такого элемента не существует ");
+        return false;
+    }
+    return true;
+}
+
+
 void Runner()
 {
     int lineLen = Prompt("Пожалуйста, введите количество строк матрицы");
@@ -75,7 +86,10 @@ void Runner()
     Console.WriteLine();
     int iNum = Prompt("Введите позицию строки искомого элемента i ");
     int jNum = Prompt("Введите позицию столбца искомого элемента j ");
-    FindElement(matrix, iNum, jNum);
+    if (ValidateNumber(matrix, iNum, jNum))
+    {
+        FindElement(matrix, iNum, jNum);
+    }
 }
 
 Runner();

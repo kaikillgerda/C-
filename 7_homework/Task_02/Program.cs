@@ -49,24 +49,16 @@ void FillMatrix(int[,] matr)
 void FindElement(int[,] array, int iNum, int jNum)
 {
     int number = array[iNum, jNum];
-    for (int i = 0; i < array.GetLength(0); i++)
+    if (number == array[iNum, jNum])
     {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (number == array[i, j])
-            {
-                Console.WriteLine($"Искомый элемент: {number}");
-                return;
-            }
-
-        }
+        Console.WriteLine($"Искомый элемент: {number}");
     }
     Console.WriteLine($"Такого элемента не существует ");
 }
 
 bool ValidateNumber(int[,] array, int i, int j)
 {
-    if (i > array.GetLength(0)-1 || j > array.GetLength(1)-1)
+    if (i > array.GetLength(0) - 1 || j > array.GetLength(1) - 1)
     {
         Console.WriteLine("Такого элемента не существует ");
         return false;

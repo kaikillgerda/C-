@@ -53,7 +53,6 @@ void FindElement(int[,] array, int iNum, int jNum)
     {
         Console.WriteLine($"Искомый элемент: {number}");
     }
-    Console.WriteLine($"Такого элемента не существует ");
 }
 
 bool ValidateNumber(int[,] array, int i, int j)
